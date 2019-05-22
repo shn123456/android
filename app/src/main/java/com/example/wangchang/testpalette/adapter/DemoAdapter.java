@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.wangchang.testpalette.R;
+import com.example.wangchang.testpalette.bean.Pblresources;
 
 import java.util.ArrayList;
 
@@ -21,12 +22,12 @@ import java.util.ArrayList;
  * Created by WangChang on 2016/4/1.
  */
 public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder> {
-    private ArrayList<String> dataList = new ArrayList<>();
+    private ArrayList<Pblresources> dataList = new ArrayList<>();
     private Resources res;
-    public void replaceAll(ArrayList<String> list) {
+    public void replaceAll(ArrayList<Pblresources> list) {
         dataList.clear();
         if (list != null && list.size() > 0) {
-            dataList.addAll(list);
+                dataList=list;
         }
         notifyDataSetChanged();
     }
